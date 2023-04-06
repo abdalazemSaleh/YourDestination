@@ -12,5 +12,5 @@ class SearchCell: UITableViewCell {
     static let reusbleIdentfire = "SearchCell"
     // MARK: - IBOutlet
     @IBOutlet weak var name: UILabel!
-    
+    @IBOutlet weak var descrption: UILabel!
 }

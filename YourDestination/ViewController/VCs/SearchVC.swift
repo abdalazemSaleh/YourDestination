@@ -57,7 +57,8 @@ extension SearchVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchCell.reusbleIdentfire, for: indexPath) as! SearchCell
         let placeMark = placeMarks[indexPath.row]
-        cell.name.text = placeMark.name ?? "Not data"
+        cell.name.text = placeMark.name ?? "No data"
+        cell.descrption.text = placeMark.administrativeArea ?? "No data"
         return cell
     }
     
@@ -84,7 +85,6 @@ extension SearchVC: MKMapViewDelegate {
         let geoCoder = CLGeocoder()
         geoCoder.geocodeAddressString(destnation) { places, error in
             guard let places = places, error == nil else {
-                self.showAlertMessage("No data to display")
                 return
             }
             self.placeMarks.removeAll()

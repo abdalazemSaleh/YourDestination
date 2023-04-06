@@ -215,7 +215,6 @@ extension Home: MKMapViewDelegate {
         request.source = startingItem
         request.destination = destnationItem
         request.transportType = .automobile
-        request.requestsAlternateRoutes = true
         
         let directions = MKDirections(request: request)
         directions.calculate { response, error in

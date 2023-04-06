@@ -53,4 +53,9 @@ extension SearchHeader: UITextFieldDelegate {
         textField.text = ""
         return true
     }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        guard let place = textField.text else { return }
+        delegate?.getDestnation(place)
+    }
 }

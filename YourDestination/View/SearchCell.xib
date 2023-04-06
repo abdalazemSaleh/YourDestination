@@ -50,6 +50,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="descrption" destination="XRz-Dz-PAD" id="YO4-Lj-a6x"/>
                 <outlet property="name" destination="UhV-Ab-SHr" id="lui-FB-Bvt"/>
             </connections>
             <point key="canvasLocation" x="156.15384615384616" y="30.213270142180093"/>
